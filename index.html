@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Untuk Bilqis 💜</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #d6c6f5, #ffffff, #c6dcff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 600px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #6a5acd;
+    }
+
+    p {
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      background: #a78bfa;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #7c6cf0;
+    }
+
+    .hidden {
+      display: none;
+      margin-top: 20px;
+    }
+
+    .image-container {
+      margin-top: 20px;
+    }
+
+    .image-container img {
+      width: 120px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 120px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 15px;
+      resize: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Untuk Bilqis 💜</h1>
+
+  <p><b>sebenernya yang marah tuh siapa sih?</b></p>
+
+  <div class="buttons">
+    <button onclick="showMessage('aku')">aku</button>
+    <button onclick="showMessage('kamu')">kamu</button>
+  </div>
+
+  <div id="message" class="hidden">
+    <p id="textMessage"></p>
+
+    <!-- Tempat kamu isi yapping -->
+    <textarea placeholder="Tulis semua yang mau kamu sampaikan di sini..."></textarea>
+  </div>
+
+  <div class="image-container">
+    <!-- Ganti src dengan gambar yang kamu mau -->
+    <img src="https://via.placeholder.com/120" alt="kamera">
+    <img src="https://via.placeholder.com/120" alt="bola">
+  </div>
+</div>
+
+<script>
+  function showMessage(choice) {
+    const messageBox = document.getElementById("message");
+    const text = document.getElementById("textMessage");
+
+    messageBox.classList.remove("hidden");
+
+    if (choice === "aku") {
+      text.innerText = "kalau ternyata aku yang salah... maafin aku ya. jujur aku juga bingung kenapa kita jadi kayak gini.";
+    } else {
+      text.innerText = "kalau ternyata kamu yang marah... yaudah aku tetep mau minta maaf duluan aja deh 😔";
+    }
+  }
+</script>
+
+</body>
+</html>
